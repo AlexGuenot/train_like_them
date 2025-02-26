@@ -1,15 +1,22 @@
-import { useSession } from "next-auth/react";
+'use client'
+import { signOut,useSession } from "next-auth/react";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
+import { useRouter,usePathname } from "next/navigation";
 
 export default function Header(){
     const { status } = useSession();
     const router = useRouter();
+    const pathname = usePathname();
     const showSession = () => {
       if (status === "unauthenticated") {
+        if (pathname === '/login' || pathname === '/register') {
+          return (
+            <Link href="/" className="text-xl">Train like them</Link>
+        );
+        }
         return(
           <>
-            <h1 className="text-xl">Train like them</h1>
+            <Link href="/" className="text-xl">Train like them</Link>
             <Link href="/login" className="btn btn-outline btn-sm">
               Sign In
             </Link>
@@ -18,8 +25,12 @@ export default function Header(){
       } else if (status === "authenticated") {
         return(
           <>
-            <h1 className="text-xl">Train like them</h1>
-            <Link href="/" className="btn btn-outline btn-sm bg-red-600">
+            <Link href="/" className="text-xl">Train like them</Link>
+            <Link href="/" className="btn btn-outline btn-sm bg-red-600"
+                  onClick={() => { signOut({ redirect: false }).then(() => {
+                      router.push("/");
+                    });
+                  }}>
               Sign Out
             </Link>
           </>
