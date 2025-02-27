@@ -19,14 +19,14 @@ const user = await User.findOne({
   email: credentials?.email,
 }).select("+password");
 
-if (!user) throw new Error("Wrong Email");
+if (!user) throw new Error("Wrong Credentials");
 
 const passwordMatch = await bcrypt.compare(
   credentials!.password,
   user.password
 );
 
-if (!passwordMatch) throw new Error("Wrong Password");
+if (!passwordMatch) throw new Error("Wrong Credentials");
 return user;
       },
     }),
