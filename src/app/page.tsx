@@ -1,25 +1,30 @@
 "use client";
 import { useSession } from "next-auth/react";
+import UserDashboard from "./logged_in_pages/dashboard/page";
+import LandingDashboard from "./logged_out/dashboard/page";
+import { useState, useEffect } from "react"; // Import useState and useEffect
 
 export default function Home() {
-  const { data: session, status } = useSession();
+  const { status } = useSession();
+  const [loading, setLoading] = useState(true); // Add loading state
+
+  useEffect(() => {
+    if (status) {
+      setLoading(false); // Set loading to false once status is available
+    }
+  }, [status]);
+
   const showSession = () => {
-    if (status === "unauthenticated") {
-      return(
-        <h1 className="text-red-600 text-center">You are Logged OUT</h1>
-      )
+    if (loading) {
+      return <div>Loading...</div>; // Render loading indicator
+    } else if (status === "unauthenticated") {
+      return <LandingDashboard />;
     } else if (status === "authenticated") {
-      return(
-        <>
-        <h1 className="text-green-600 text-center">You are Logged IN as : </h1>
-        <h2 className="text-blue-600 text-center">{session?.user?.name}</h2>     
-        </>
-    )}
-  }
-  return (
-    <>
-    {showSession()}
-    </>
-  );
-  }
-  
+      return <UserDashboard />;
+    } else {
+        return <div>Loading...</div>; // handle initial undefined status.
+    }
+  };
+
+  return <>{showSession()}</>;
+}

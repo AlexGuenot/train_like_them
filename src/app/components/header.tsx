@@ -11,7 +11,8 @@ export default function Header(){
       if (status === "unauthenticated") {
         if (pathname === '/login' || pathname === '/register') {
           return (
-null         );
+            null         
+          );
         }
         return(
           <>
@@ -32,13 +33,11 @@ null         );
             </Link>
           </>
         )
-
     }
   }
   return(
     <div className="navbar flex justify-between px-8 py-4">
-      <Link href="/" className="text-xl">Train like them</Link>
-
+      <Link href="/" className="text-xl font-mono">TRAIN LIKE THEM</Link>
       {showSession()}
     </div>
   )
