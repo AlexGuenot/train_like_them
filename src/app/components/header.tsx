@@ -17,7 +17,7 @@ export default function Header(){
         return(
           <>
             <Link href="/" className="text-xl">Train like them</Link>
-            <Link href="/login" className="btn btn-outline btn-sm">
+            <Link href="/login" className="btn btn-sm text-white bg-blue-600 hover:bg-blue-700">
               Sign In
             </Link>
           </>
@@ -26,7 +26,7 @@ export default function Header(){
         return(
           <>
             <Link href="/" className="text-xl">Train like them</Link>
-            <Link href="/" className="btn btn-outline btn-sm bg-red-600"
+            <Link href="/" className="btn btn-sm  text-white bg-red-600 hover:bg-red-700"
                   onClick={() => { signOut({ redirect: false }).then(() => {
                       router.push("/");
                     });

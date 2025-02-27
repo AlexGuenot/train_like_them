@@ -36,7 +36,6 @@ export default function Register() {
       }
       return;
     } else {
-      ref.current?.reset();
       toast.success("Registration successful!");
       return router.push("/login");
     }

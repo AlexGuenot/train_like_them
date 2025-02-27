@@ -15,12 +15,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" data-theme="dark">
+    <html lang="en" data-theme="luxury">
       <Provider>
         <body>
           <Header/>
           {children}
-          <ToastContainer autoClose={3000} transition={Flip} />
+          <ToastContainer autoClose={1000} transition={Flip} hideProgressBar={true} position="bottom-right" theme="colored" />
         </body>
       </Provider>
     </html>
