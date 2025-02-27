@@ -11,12 +11,10 @@ export default function Header(){
       if (status === "unauthenticated") {
         if (pathname === '/login' || pathname === '/register') {
           return (
-            <Link href="/" className="text-xl">Train like them</Link>
-        );
+null         );
         }
         return(
           <>
-            <Link href="/" className="text-xl">Train like them</Link>
             <Link href="/login" className="btn btn-sm text-white bg-blue-600 hover:bg-blue-700">
               Sign In
             </Link>
@@ -25,7 +23,6 @@ export default function Header(){
       } else if (status === "authenticated") {
         return(
           <>
-            <Link href="/" className="text-xl">Train like them</Link>
             <Link href="/" className="btn btn-sm  text-white bg-red-600 hover:bg-red-700"
                   onClick={() => { signOut({ redirect: false }).then(() => {
                       router.push("/");
@@ -40,6 +37,8 @@ export default function Header(){
   }
   return(
     <div className="navbar flex justify-between px-8 py-4">
+      <Link href="/" className="text-xl">Train like them</Link>
+
       {showSession()}
     </div>
   )
