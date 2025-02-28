@@ -1,6 +1,6 @@
 "use client";
 import { useSession } from "next-auth/react";
-import UserDashboard from "./logged_in_pages/dashboard/page";
+import UserDashboard from "./logged_in/dashboard/page";
 import LandingDashboard from "./logged_out/dashboard/page";
 import { useState, useEffect } from "react"; // Import useState and useEffect
 

@@ -36,8 +36,8 @@ export default function Header(){
     }
   }
   return(
-    <div className="navbar flex justify-between px-8 py-4 border border-base-300">
-      <Link href="/" className="text-xl">TRAIN LIKE THEM</Link>
+    <div className="navbar flex justify-between px-8 sticky top-0 z-50 bg-base-100">
+      <Link href="/" className="text-3xl" style={{ fontFamily: 'Bebas Neue'}}>TRAIN LIKE THEM</Link>
       {showSession()}
     </div>
   )
