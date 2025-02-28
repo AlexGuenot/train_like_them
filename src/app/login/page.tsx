@@ -39,7 +39,7 @@ export default function Login() {
   return (
     <section className="flex justify-center mt-16">
       <form
-        className="p-6 w-full max-w-[400px] flex flex-col justify-between items-center gap-4"
+        className="border-2 border-base-300 rounded-md px-16 py-16 bg-base-200 max-w-[400px] flex flex-col justify-between items-center gap-4 mt-16"
         onSubmit={handleSubmit}
       >
         <h1 className="text-2xl font-bold">Sign In</h1>

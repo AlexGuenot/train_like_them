@@ -46,9 +46,9 @@ export default function Register() {
       <form
         ref={ref}
         onSubmit={handleSubmit} // Use onSubmit instead of action
-        className="p-6 w-full max-w-[400px] flex flex-col justify-between items-center gap-2"
+        className="border-2 rounded-md border-base-300 px-16 py-16 bg-base-200 max-w-[400px] flex flex-col justify-between items-center gap-4 mt-16"
       >
-        <h1 className="mb-5 text-2xl font-bold">Register</h1>
+        <h1 className="text-2xl font-bold">Register</h1>
 
         <label className="input input-bordered flex items-center gap-2">
           <svg
