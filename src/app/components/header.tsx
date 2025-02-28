@@ -17,7 +17,7 @@ export default function Header(){
         return(
           <>
             <Link href="/login" className="btn btn-sm text-white bg-blue-600 hover:bg-blue-700">
-              Sign In
+              SIGN IN
             </Link>
           </>
         )
@@ -29,7 +29,7 @@ export default function Header(){
                       router.push("/");
                     });
                   }}>
-              Sign Out
+              SIGN OUT
             </Link>
           </>
         )
@@ -37,7 +37,7 @@ export default function Header(){
   }
   return(
     <div className="navbar flex justify-between px-8 py-4 border border-base-300">
-      <Link href="/" className="text-xl font-mono">TRAIN LIKE THEM</Link>
+      <Link href="/" className="text-xl">TRAIN LIKE THEM</Link>
       {showSession()}
     </div>
   )

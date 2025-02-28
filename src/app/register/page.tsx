@@ -48,7 +48,7 @@ export default function Register() {
         onSubmit={handleSubmit} // Use onSubmit instead of action
         className="border-2 rounded-md border-base-300 px-16 py-16 bg-base-200 max-w-[400px] flex flex-col justify-between items-center gap-4 mt-16"
       >
-        <h1 className="text-2xl font-bold">Register</h1>
+        <h1 className="text-4xl" style={{ fontFamily: 'Bebas Neue'}}>Join Us</h1>
 
         <label className="input input-bordered flex items-center gap-2">
           <svg
@@ -104,7 +104,7 @@ export default function Register() {
           />
         </label>
 
-        <button className=" btn btn-success">Sign Up</button>
+        <button className=" btn btn-success">SIGN UP</button>
 
         <Link
           href="/login"

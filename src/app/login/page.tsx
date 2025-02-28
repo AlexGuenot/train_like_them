@@ -42,7 +42,7 @@ export default function Login() {
         className="border-2 border-base-300 rounded-md px-16 py-16 bg-base-200 max-w-[400px] flex flex-col justify-between items-center gap-4 mt-16"
         onSubmit={handleSubmit}
       >
-        <h1 className="text-2xl font-bold">Sign In</h1>
+        <h1 className="text-4xl" style={{ fontFamily: 'Bebas Neue'}}>Welcome Back</h1>
         <label className="input input-bordered flex items-center gap-2">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -80,7 +80,7 @@ export default function Login() {
             placeholder="Password"
           />
         </label>
-        <button className="btn btn-success">Sign In</button>
+        <button className="btn btn-success">SIGN IN</button>
 
         <Link
           href="/register"
