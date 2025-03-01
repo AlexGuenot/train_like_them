@@ -1,5 +1,5 @@
 import Image from "next/image";
-import LebronJames from "../../../../public/lebron-james.avif"
+import LebronJames from "../../../public/lebron-james.avif"
 import Link from "next/link";
 export default function LandingDashboard() 
 {
@@ -38,9 +38,9 @@ export default function LandingDashboard()
             </div>
           </div>
         </section>
-        {/* Section Keep track of your progress */}
+        {/* Section Improve your Overall athleticism  */}
         <section className="mt-16">
-        <h3 className="text-center italic text-3xl underline mb-4" style={{ fontFamily: 'Bebas Neue'}}>Keep track of your progress</h3>
+        <h3 className="text-center italic text-3xl underline mb-4" style={{ fontFamily: 'Bebas Neue'}}>Improve your Overall athleticism</h3>
         <div className="flex shadow text-center justify-center mx-32 bg-base-300 p-4 rounded-xl gap-32">
           <div className="text-primary">
             <div className="radial-progress" style={{"--value":10} as React.CSSProperties} role="progressbar">10%</div>
@@ -64,9 +64,9 @@ export default function LandingDashboard()
           </div>
         </div>
         </section>
-        {/* Section Statistics Tracking */}
+        {/* Section Save your data */}
         <section className="mt-16 mb-8">
-          <h3 className="text-center italic text-3xl underline mb-4" style={{ fontFamily: 'Bebas Neue'}}>???</h3>
+          <h3 className="text-center italic text-3xl underline mb-4" style={{ fontFamily: 'Bebas Neue'}}>Save your data</h3>
           <div className="flex stats shadow text-center justify-center mx-32 bg-base-300">
             <div className="stat place-items-center gap-4">
               <div className="stat-title text-lg">Training Started</div>

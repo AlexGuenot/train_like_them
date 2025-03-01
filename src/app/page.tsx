@@ -1,7 +1,7 @@
 "use client";
 import { useSession } from "next-auth/react";
-import UserDashboard from "./logged_in/dashboard/page";
-import LandingDashboard from "./logged_out/dashboard/page";
+import UserDashboard from "./user-pages/dashboard/page";
+import LandingDashboard from "./landing-page/page";
 import { useState, useEffect } from "react"; // Import useState and useEffect
 
 export default function Home() {
