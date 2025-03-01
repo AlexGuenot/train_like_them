@@ -2,11 +2,16 @@ import { useSession } from "next-auth/react";
 export default function UserDashboard() 
 {
     const { data: session } = useSession();
-    
+    const firstName = session?.user?.name?.split(" ")[0];
   return (
     <>
-    <h1 className="text-green-600 text-center">You are Logged IN as : </h1>
-    <h2 className="text-blue-600 text-center">{session?.user?.name}</h2> 
+    <section className="text-center" style={{ fontFamily: 'Bebas Neue'}}>
+      <h1 className="text-6xl">Welcome Back<span className="text-orange-600 block">{firstName}</span>
+      </h1>
+    </section>
+    <section>
+      
+    </section>
     </>
   );  
 }
